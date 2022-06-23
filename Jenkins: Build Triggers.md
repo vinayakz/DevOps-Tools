@@ -98,3 +98,11 @@ Let’s see how to add build a webhook in GitHub and then add this webhook in Je
   https://example.com/postreceive
   //This URL is a example URL where the Jenkins server is running
 ```
+
+## 5. Poll SCM:
+
+Poll SCM periodically polls the SCM to check whether changes were made (i.e. new commits) and builds the project if new commits were pushed since the last build.
+
+You must schedule the polling duration in the scheduler field. Like we explained above in the Build periodically section. You can see the Build periodically section to know how to schedule.
+
+After successfully scheduled, the scheduler polls the SCM according to your specified duration in scheduler field and builds the project if new commits were pushed since the last build.

@@ -17,6 +17,11 @@ A stage block defines a conceptually distinct subset of tasks performed through 
 ### Step
 A single task. Fundamentally, a step tells Jenkins what to do at a particular point in time (or "step" in the process). For example, to execute the shell command ```sh make ``` use the sh step: sh ```sh 'make' ```. When a plugin extends the Pipeline DSL, [1] that typically means the plugin has implemented a new step.
 
+Ref Steps :- https://www.jenkins.io/doc/pipeline/steps/
+
+![image](https://user-images.githubusercontent.com/33689324/176910479-89358de9-67b4-4f41-9da9-02bacc36669a.png)
+
+
 
 # Defining a Pipeline
 1. Declarative  
@@ -35,6 +40,20 @@ DSL stands for Domain Specific Language.
 
 1. Declarative Pipeline fundamentals
   In Declarative Pipeline syntax, the pipeline block defines all the work done throughout your entire Pipeline.
+  
+  ## Pipelines Jenkinsfile agent declarative
+  A agent is a machine which is part of the Jenkins environment and is capable of executing a Pipeline.
+  ```sh
+   Agent any
+   Agent none
+   Agent {
+      label 'centOS'
+     }
+   Agent {
+      docker 'ghost:latest'
+     }   
+  ```
+
   
   ```sh
   Jenkinsfile (Declarative Pipeline)

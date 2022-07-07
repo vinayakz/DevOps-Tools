@@ -74,7 +74,7 @@ docker run hello-world
     ```sh 
     docker pull jenkins:2.60.3
     ```
-3. creating a container - docker run -p 8080:8080 -p 5000:5000 -v /your/home:/var/jenkins_home jenkins
+3. creating a container - docker run -p 8080:8080 or  -p 50000:50000 -v /your/home:/var/jenkins_home jenkins
 4. If you want to  delete this container and images
   ```sh 
   docker ps -a  | grep jenkins 

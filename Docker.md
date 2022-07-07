@@ -88,4 +88,13 @@ docker run hello-world
   docker images  | grep jenkins 
   docker rmi <ImageID or Image Name and Tag>
   ```
+
+- To view the running containers 
+  ```sh 
+  docker ps
+  ```
+- To view running as well stopped containers  
+  ```sh
+  docker ps -a
+  ```
   

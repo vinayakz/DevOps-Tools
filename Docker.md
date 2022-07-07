@@ -63,4 +63,29 @@ docker run hello-world
 6. This command downloads a test image and runs it in a container. When the container runs, it prints an informational message and exits.
 7. Docker CE is installed and running. 
 
-## Setup is complete. We are ready to start learning Docker !!!!
+- Setup is complete. We are ready to start learning Docker !!!!
+
+# Example Of Docker image 
+
+1. To pull an image from docker hub 
+   https://hub.docker.com/_/jenkins?tab=description
+   
+2. Pulling an image -
+    ```sh 
+    docker pull jenkins:2.60.3
+    ```
+3. creating a container - docker run -p 8080:8080 -p 5000:5000 -v /your/home:/var/jenkins_home jenkins
+4. If you want to  delete this container and images
+  ```sh 
+  docker ps -a  | grep jenkins 
+```
+5. Deleting the container  
+  ```sh
+  docker rm <ContainerID or Name>
+  ```
+6. Deleting the image  
+  ```sh
+  docker images  | grep jenkins 
+  docker rmi <ImageID or Image Name and Tag>
+  ```
+  
